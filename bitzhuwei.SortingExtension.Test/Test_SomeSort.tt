@@ -1,0 +1,82 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ output extension=".cs" #>
+<# string[] nameCHS = new string[] { "冒泡", "插入", "归并", "快速", "选择", "希尔", "堆" }; #>
+<# string[] nameEN = new string[] { "Bubble", "Insertion", "Merge", "Quick", "Selection", "Shell", "Heap" }; #>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Collections;
+
+namespace bitzhuwei.SortingExtension.Test
+{
+<#	for (int i = 0; i < nameCHS.Length && i < nameEN.Length; i++)
+	{
+#>
+    /// <summary>
+    /// 用于对<#= nameCHS[i] #>排序进行测试的类
+    /// </summary>
+    partial class Test_<#= nameEN[i] #>Sort
+    {
+		/// <summary>
+        /// 测试方法001
+        /// </summary>
+        public static void Test<#= nameEN[i] #>Sort001(int listCount, bool descending)
+        {
+            Console.WriteLine("Test: _<#= nameEN[i] #>Sort.cs 001");
+            if (listCount < 0)
+            {
+                Console.WriteLine("要测试元素数目小于0的数列，这是无法实现的。程序也屏蔽了这个问题，无需担心。");
+                //Console.ReadLine();
+            }
+            List<Element> lstElement = Tools.RandomSequentialNumbersWith2Same(0, listCount);
+            Test<#= nameEN[i] #>Sort001(lstElement, descending);
+        }
+        /// <summary>
+        /// 测试方法001
+        /// </summary>
+        public static void Test<#= nameEN[i] #>Sort001(List<Element> list, bool descending)
+        {
+            Console.WriteLine("Test: _<#= nameEN[i] #>Sort.cs 001");
+            if (list == null)
+            {
+                Console.WriteLine("要排序的数列为null，无法排序。程序为求效率，没有进行数列为null的检验。");
+                //Console.ReadLine();
+            }
+            List<Element> lstElement = list;
+            List<Element> lstOriginalElement = new List<Element>(lstElement.AsEnumerable());
+            lstElement.<#= nameEN[i] #>Sort(descending);
+            Tools.testError(lstElement, lstOriginalElement, descending);
+            Console.WriteLine();
+        }
+        /// <summary>
+        /// 测试方法001
+        /// </summary>
+        public static void Test<#= nameEN[i] #>Sort001(bool descending)
+        {
+            Console.WriteLine("Test: _<#= nameEN[i] #>Sort.cs 001");
+            int count = Tools.seed.Next(0, 11);// 0 1 2 3 4 5 6 7 8 9 10
+            Test<#= nameEN[i] #>Sort001(count, descending);
+        }
+    }
+<#
+	}
+#>
+	class SimpleTester
+	{
+		public static void StartTest(int listCount, bool descending)
+		{
+<#	for (int i = 0; i < nameCHS.Length && i < nameEN.Length; i++)
+	{
+#>
+			Test_<#= nameEN[i] #>Sort.Test<#= nameEN[i] #>Sort001(listCount, descending);
+<#
+	}
+#>
+		}
+		public static void StartTest()
+		{
+			StartTest(10, false);
+		}
+	}
+}

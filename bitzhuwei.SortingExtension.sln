@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bitzhuwei.SortingExtension", "bitzhuwei.SortingExtension\bitzhuwei.SortingExtension.csproj", "{78071602-AB16-45CF-9152-B7E22C4E2373}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bitzhuwei.SortingExtension.Test", "bitzhuwei.SortingExtension.Test\bitzhuwei.SortingExtension.Test.csproj", "{01E42F8D-F4E4-4553-A6CB-79441B9F0A6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bitzhuwei.SortingExtension.Winform", "bitzhuwei.SortingExtension.Winform\bitzhuwei.SortingExtension.Winform.csproj", "{0EBF4C90-97BC-4B95-87D7-5E07EA6F5870}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://bitzhuwei.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = bitzhuwei.SortingExtension\\bitzhuwei.SortingExtension.csproj
+		SccProjectName1 = bitzhuwei.SortingExtension
+		SccLocalPath1 = bitzhuwei.SortingExtension
+		SccProjectUniqueName2 = bitzhuwei.SortingExtension.Test\\bitzhuwei.SortingExtension.Test.csproj
+		SccProjectName2 = bitzhuwei.SortingExtension.Test
+		SccLocalPath2 = bitzhuwei.SortingExtension.Test
+		SccProjectUniqueName3 = bitzhuwei.SortingExtension.Winform\\bitzhuwei.SortingExtension.Winform.csproj
+		SccProjectName3 = bitzhuwei.SortingExtension.Winform
+		SccLocalPath3 = bitzhuwei.SortingExtension.Winform
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78071602-AB16-45CF-9152-B7E22C4E2373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78071602-AB16-45CF-9152-B7E22C4E2373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78071602-AB16-45CF-9152-B7E22C4E2373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78071602-AB16-45CF-9152-B7E22C4E2373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01E42F8D-F4E4-4553-A6CB-79441B9F0A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01E42F8D-F4E4-4553-A6CB-79441B9F0A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01E42F8D-F4E4-4553-A6CB-79441B9F0A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01E42F8D-F4E4-4553-A6CB-79441B9F0A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EBF4C90-97BC-4B95-87D7-5E07EA6F5870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EBF4C90-97BC-4B95-87D7-5E07EA6F5870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EBF4C90-97BC-4B95-87D7-5E07EA6F5870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EBF4C90-97BC-4B95-87D7-5E07EA6F5870}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

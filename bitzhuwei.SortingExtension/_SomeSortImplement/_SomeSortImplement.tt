@@ -1,0 +1,57 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ output extension=".txt" #>
+<# string nameCHS = "堆"; #>
+<# string nameEN = "Heap"; #>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Collections;
+
+namespace System
+{
+    public static partial class _<#= nameEN #>Sort
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="arr"></param>
+        private static void <#= nameEN #>SortDescending1<T>(this IList<T> arr)
+            where T : IComparable
+        {
+			//TODO: Add implemention here
+
+#if DEBUG
+            arr.WriteList();
+#endif
+			throw new NotImplementedException();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="arr"></param>
+        private static void <#= nameEN #>SortAscending1<T>(this IList<T> arr)
+            where T : IComparable
+        {
+			//TODO: Add implemention here
+
+#if DEBUG
+            arr.WriteList();
+#endif
+			throw new NotImplementedException();
+        }
+
+		private static void <#= nameEN #>SortDescending<T>(this IList<T> arr)
+			where T : IComparable
+		{
+			<#= nameEN #>SortDescending1(arr);
+		}
+		private static void <#= nameEN #>SortAscending<T>(this IList<T> arr)
+			where T : IComparable
+		{
+			<#= nameEN #>SortAscending1(arr);
+		}
+    }
+}

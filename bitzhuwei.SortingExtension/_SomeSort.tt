@@ -1,0 +1,119 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ output extension=".cs" #>
+<# string[] nameCHS = new string[] { "冒泡", "直接插入", "归并", "快速", "选择", "希尔", "堆" }; #>
+<# string[] nameEN = new string[] { "Bubble", "Insertion", "Merge", "Quick", "Selection", "Shell", "Heap" }; #>
+<# bool[] propStable = new bool[] { true, true, true, false, false, false, false }; #>
+<# string[] explainations = new string[] 
+{
+@"
+冒泡排序（降序）原理：
+每轮找到最小的数放到已排好的数列。
+从左到右以此比较两个相邻的数，若左小右大顺序则交换一下。
+这样，当一轮比较结束，最小的数就排在了最右边。
+下一轮比较前N-1个数即可。
+经过N-1轮比较，数列就是大->小排序的了。
+改进的冒泡排序：当某轮比较没有发生移动时，就可以确定排序完成了，从而减少了排序的轮数。
+稳定排序
+时间复杂度为O(n^2)
+",
+@"
+直接插入排序（降序）原理：
+将剩余数列的第一个加入已排好的数列。
+这是玩扑克牌的排序方法。
+一张一张地拿牌，拿到一张新牌时，就跟之前手里的牌从右到左地比较。
+若新牌大，则将此处的旧牌向右移动，原位置空了出来。
+当新牌不再大时，插入空位。
+当全部牌拿完，顺序就排好了。
+稳定排序
+时间复杂度为O(n2)
+",
+@"
+归并排序（降序）原理：
+利用了递归进行排序的方法。先排好左右两部分，再合并。
+将数列等分为左右两部分，先分别对其排序，再将分别排好的两个数列归并为一个排好的序列。
+循环之，直到这部分只有1个数，那么这部分已经排好序了。
+归并过程，将排好的两部分列队，从第一个数开始比较，将较大的放到最终要排的数列。
+若最后剩下一些数，直接接到数列最后即可。
+稳定排序
+时间复杂度为O(nlogn)
+",
+@"
+快速排序（降序）原理：
+使用了递归的方法，为第一个数找到其应该在的位置，然后分别对其左右部分使用快速排序。
+网上说是对冒泡排序的改进，我看不出来是怎么改进的。
+为第一个数字找其应该在的位置的方法：与右边的比较，有大的就交换；然后与左边的比较，有小的就交换。
+那么最后所有大的都在其左边了，所有小的都在其右边了，这个数的位置就是一定是正确的。
+不稳定排序
+时间复杂度为O(nlogn)
+",
+@"
+选择排序（降序）原理：
+是冒泡排序的改进，每一轮找到最大的数放到已排好的数列。
+首先认为第一个是最大的，然后依次比较，发现更大的时更新之，记录其索引，比较完之后，将第一个元素与记录索引的数交换依次即可。
+就是说，选择排序为了排好一个数，只需发生一次交换。
+稳定排序
+时间复杂度为O(n2)
+",
+@"
+希尔排序（降序）原理：
+又称为缩小增量法，属于插入类的排序。
+将数列分割为若干子数列，对各个子数列中相同位置的数进行直接插入排序。
+逐渐缩小子数列的长度，直到子数列只有一个数。
+不稳定排序
+时间复杂度为O(n1.5)
+",
+@"
+堆排序（降序）原理：
+对冒泡排序的改进。
+冒泡排序每轮都要对剩余数列完整比较一遍，堆排序则通过树的形式保留了中间的比较结果，从而减少了比较次数。
+开始时先构造小根堆（从最后一个非叶结点开始）。
+然后循环，将根（最小数）与数列最后一个数字交换，就得到了最小数。对剩余的数列再次构造小根堆并得到当前最小数，直到堆只有一个数字。
+不稳定排序
+时间复杂度为O(nlogn)
+"
+}; #>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Collections; 
+
+namespace System
+{
+<#	for (int i = 0; i < nameCHS.Length && i < nameEN.Length; i++)
+	{
+#>
+	/// <summary>
+	/// <#= nameCHS[i] #>排序算法
+	/// <para><#  if (!propStable[i]) Write("不"); #>稳定排序</para>
+	/// </summary>
+	public static partial class _<#= nameEN[i] #>Sort
+	{
+		<#
+		string[] expLines = explainations[i].Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+		#>/// <summary>
+		/// <#= nameCHS[i] #>排序
+		/// 请勿传null给本函数，否则将发生异常
+		/// <para><#  if (!propStable[i]) Write("不"); #>稳定排序</para>
+		<#
+		foreach (string expLine in expLines)
+		{
+		#>/// <para><# Write(expLine); #></para>
+		<#
+		}
+		#>/// </summary>
+		/// <typeparam name="T">实现了IComparable的类型<para>例如int</para></typeparam>
+		/// <param name="arr">请勿传null给本参数，否则将发生异常</param>
+		/// <param name="descending">true为降序排序，false为升序排序</param>
+		public static void <#= nameEN[i] #>Sort<T>(this IList<T> arr, bool descending = true)
+			where T : IComparable
+		{
+			if (descending)
+				arr.<#= nameEN[i] #>SortDescending();
+			else
+				arr.<#= nameEN[i] #>SortAscending();
+		}
+	}
+<#
+	}
+#>
+}
