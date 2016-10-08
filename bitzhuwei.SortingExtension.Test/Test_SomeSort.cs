@@ -11,7 +11,7 @@ namespace bitzhuwei.SortingExtension.Test
     /// </summary>
     partial class Test_BubbleSort
     {
-		/// <summary>
+        /// <summary>
         /// 测试方法001
         /// </summary>
         public static void TestBubbleSort001(int listCount, bool descending)
@@ -57,7 +57,7 @@ namespace bitzhuwei.SortingExtension.Test
     /// </summary>
     partial class Test_InsertionSort
     {
-		/// <summary>
+        /// <summary>
         /// 测试方法001
         /// </summary>
         public static void TestInsertionSort001(int listCount, bool descending)
@@ -103,7 +103,7 @@ namespace bitzhuwei.SortingExtension.Test
     /// </summary>
     partial class Test_MergeSort
     {
-		/// <summary>
+        /// <summary>
         /// 测试方法001
         /// </summary>
         public static void TestMergeSort001(int listCount, bool descending)
@@ -149,7 +149,7 @@ namespace bitzhuwei.SortingExtension.Test
     /// </summary>
     partial class Test_QuickSort
     {
-		/// <summary>
+        /// <summary>
         /// 测试方法001
         /// </summary>
         public static void TestQuickSort001(int listCount, bool descending)
@@ -195,7 +195,7 @@ namespace bitzhuwei.SortingExtension.Test
     /// </summary>
     partial class Test_SelectionSort
     {
-		/// <summary>
+        /// <summary>
         /// 测试方法001
         /// </summary>
         public static void TestSelectionSort001(int listCount, bool descending)
@@ -241,7 +241,7 @@ namespace bitzhuwei.SortingExtension.Test
     /// </summary>
     partial class Test_ShellSort
     {
-		/// <summary>
+        /// <summary>
         /// 测试方法001
         /// </summary>
         public static void TestShellSort001(int listCount, bool descending)
@@ -287,7 +287,7 @@ namespace bitzhuwei.SortingExtension.Test
     /// </summary>
     partial class Test_HeapSort
     {
-		/// <summary>
+        /// <summary>
         /// 测试方法001
         /// </summary>
         public static void TestHeapSort001(int listCount, bool descending)
@@ -328,21 +328,21 @@ namespace bitzhuwei.SortingExtension.Test
             TestHeapSort001(count, descending);
         }
     }
-	class SimpleTester
-	{
-		public static void StartTest(int listCount, bool descending)
-		{
-			Test_BubbleSort.TestBubbleSort001(listCount, descending);
-			Test_InsertionSort.TestInsertionSort001(listCount, descending);
-			Test_MergeSort.TestMergeSort001(listCount, descending);
-			Test_QuickSort.TestQuickSort001(listCount, descending);
-			Test_SelectionSort.TestSelectionSort001(listCount, descending);
-			Test_ShellSort.TestShellSort001(listCount, descending);
-			Test_HeapSort.TestHeapSort001(listCount, descending);
-		}
-		public static void StartTest()
-		{
-			StartTest(10, false);
-		}
-	}
+    class SimpleTester
+    {
+        public static void StartTest(int listCount, bool descending)
+        {
+            Test_BubbleSort.TestBubbleSort001(listCount, descending);
+            Test_InsertionSort.TestInsertionSort001(listCount, descending);
+            Test_MergeSort.TestMergeSort001(listCount, descending);
+            Test_QuickSort.TestQuickSort001(listCount, descending);
+            Test_SelectionSort.TestSelectionSort001(listCount, descending);
+            Test_ShellSort.TestShellSort001(listCount, descending);
+            Test_HeapSort.TestHeapSort001(listCount, descending);
+        }
+        public static void StartTest()
+        {
+            StartTest(10, false);
+        }
+    }
 }

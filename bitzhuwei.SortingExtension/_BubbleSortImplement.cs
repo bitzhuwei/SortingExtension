@@ -136,17 +136,17 @@ namespace System
 #endif
         }
 
-   		private static void BubbleSortDescending<T>(this IList<T> arr)
-			where T : IComparable
-		{
-			BubbleSortDescending1(arr);
+        private static void BubbleSortDescending<T>(this IList<T> arr)
+            where T : IComparable
+        {
+            BubbleSortDescending1(arr);
             //BubbleSortDescending2(arr);
-		}
-		private static void BubbleSortAscending<T>(this IList<T> arr)
-			where T : IComparable
-		{
-			BubbleSortAscending1(arr);
+        }
+        private static void BubbleSortAscending<T>(this IList<T> arr)
+            where T : IComparable
+        {
+            BubbleSortAscending1(arr);
             //BubbleSortAscending2(arr);
-		}
+        }
     }
 }
