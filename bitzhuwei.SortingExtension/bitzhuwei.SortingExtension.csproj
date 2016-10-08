@@ -46,20 +46,21 @@
     <Compile Include="Class1.cs" />
     <Compile Include="DebugTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="_BubbleSortImplement - 复制.cs" />
+    <Compile Include="_BubbleSortImplement.comparer.cs" />
     <Compile Include="_BubbleSortImplement.cs" />
-    <Compile Include="_HeapSortImplement - 复制.cs" />
+    <Compile Include="_HeapSortImplement.comparer.cs" />
     <Compile Include="_HeapSortImplement.cs" />
-    <Compile Include="_InsertionSortImplement - 复制.cs" />
+    <Compile Include="_InsertionSortImplement.comparer.cs" />
     <Compile Include="_InsertionSortImplement.cs" />
-    <Compile Include="_MergeSortImplement - 复制.cs" />
+    <Compile Include="_MergeSortImplement.comparer.cs" />
     <Compile Include="_MergeSortImplement.cs" />
-    <Compile Include="_QuickSortImplement - 复制.cs" />
+    <Compile Include="_QuickSortImplement.comparer.cs" />
     <Compile Include="_QuickSortImplement.cs" />
-    <Compile Include="_SelectionSortImplement - 复制.cs" />
+    <Compile Include="_SelectionSortImplement.comparer.cs" />
     <Compile Include="_SelectionSortImplement.cs" />
-    <Compile Include="_ShellSortImplement - 复制.cs" />
+    <Compile Include="_ShellSortImplement.comparer.cs" />
     <Compile Include="_ShellSortImplement.cs" />
+    <Compile Include="_SomeSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
