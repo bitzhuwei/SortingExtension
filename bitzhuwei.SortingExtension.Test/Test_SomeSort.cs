@@ -39,6 +39,7 @@ namespace bitzhuwei.SortingExtension.Test
             List<Element> lstElement = list;
             List<Element> lstOriginalElement = new List<Element>(lstElement.AsEnumerable());
             lstElement.BubbleSort(descending);
+
             Tools.testError(lstElement, lstOriginalElement, descending);
             Console.WriteLine();
         }

@@ -46,37 +46,20 @@
     <Compile Include="Class1.cs" />
     <Compile Include="DebugTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="_SomeSort.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_SomeSort.tt</DependentUpon>
-    </Compile>
-    <Compile Include="_SomeSortImplement\_BubbleSortImplement.cs" />
-    <Compile Include="_SomeSortImplement\_HeapSortImplement.cs" />
-    <Compile Include="_SomeSortImplement\_InsertionSortImplement.cs" />
-    <Compile Include="_SomeSortImplement\_MergeSortImplement.cs" />
-    <Compile Include="_SomeSortImplement\_QuickSortImplement.cs" />
-    <Compile Include="_SomeSortImplement\_SelectionSortImplement.cs" />
-    <Compile Include="_SomeSortImplement\_ShellSortImplement.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="_SomeSort.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>_SomeSort.cs</LastGenOutput>
-    </None>
-    <None Include="_SomeSortImplement\_SomeSortImplement.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>_SomeSortImplement1.txt</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="_SomeSortImplement\ReadMe.txt" />
-    <Content Include="_SomeSortImplement\_SomeSortImplement.txt" />
-    <Content Include="_SomeSortImplement\_SomeSortImplement1.txt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_SomeSortImplement.tt</DependentUpon>
-    </Content>
+    <Compile Include="_BubbleSortImplement - 复制.cs" />
+    <Compile Include="_BubbleSortImplement.cs" />
+    <Compile Include="_HeapSortImplement - 复制.cs" />
+    <Compile Include="_HeapSortImplement.cs" />
+    <Compile Include="_InsertionSortImplement - 复制.cs" />
+    <Compile Include="_InsertionSortImplement.cs" />
+    <Compile Include="_MergeSortImplement - 复制.cs" />
+    <Compile Include="_MergeSortImplement.cs" />
+    <Compile Include="_QuickSortImplement - 复制.cs" />
+    <Compile Include="_QuickSortImplement.cs" />
+    <Compile Include="_SelectionSortImplement - 复制.cs" />
+    <Compile Include="_SelectionSortImplement.cs" />
+    <Compile Include="_ShellSortImplement - 复制.cs" />
+    <Compile Include="_ShellSortImplement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
